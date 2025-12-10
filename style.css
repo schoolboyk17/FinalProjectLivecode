@@ -1,0 +1,229 @@
+/* Basic page setup */
+body {
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: teal;
+    color: bisque;
+}
+
+/* Sticky header */
+header.sticky {
+    position: sticky;
+    top: 0;
+    background-color: teal;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.logo {
+    margin: 0;
+    font-size: 22px;
+    color: goldenrod;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: wheat;
+    text-decoration: none;
+}
+
+/* Hero section */
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 40px;
+    gap: 20px;
+}
+
+.hero-left button {
+    background-color: sienna;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    color: white;
+    margin-top: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Image with overlay text */
+.relative-box {
+    background-color: teal;
+    height: 250px;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: teal;
+    padding: 5px 10px;
+}
+
+/* Landing page image grid */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    padding: 20px;
+}
+
+.img-box {
+    background-color: teal;
+    height: 250px;
+    border: 1px solid goldenrod;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* Reservation form */
+.reservation-form {
+    padding: 40px;
+}
+
+.reservation-form form {
+    display: grid;
+    gap: 10px;
+    width: 250px;
+}
+
+form input,
+button {
+    padding: 8px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: teal;
+    margin-top: 30px;
+}
+
+/* Hero image sizing */
+.hero-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* Dessert grid */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    padding: 30px;
+}
+
+.menu-item {
+    text-align: center;
+}
+
+.menu-img {
+    background: teal;
+    height: 200px;
+    border: 2px solid goldenrod;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.menu-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Page headings */
+.page-heading {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Alternating layout for lunch and dinner */
+.alt-menu {
+    display: grid;
+    gap: 40px;
+    padding: 30px;
+}
+
+.alt-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* full-width layout restored */
+    align-items: center;
+    gap: 25px;
+    background: teal;
+    padding: 20px;
+    border: 3px solid goldenrod;
+    border-radius: 6px;
+}
+
+/* Reverse direction */
+.alt-item.reverse {
+    direction: rtl;
+}
+
+.alt-item img {
+    width: 100%;
+    height: 230px; /* restored original height */
+    object-fit: cover;
+    border-radius: 4px;
+    border: 2px solid goldenrod;
+}
+
+/* Text inside alternating layout */
+.alt-item p {
+    margin: 0;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.3;
+    direction: ltr;
+}
+
+/* Mobile layout */
+@media (max-width: 700px) {
+
+    .alt-item,
+    .alt-item.reverse {
+        grid-template-columns: 1fr;
+        text-align: center;
+        direction: ltr;
+    }
+
+    .alt-item img {
+        height: 220px;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .menu-img {
+        height: 220px;
+    }
+
+    .page-heading h2 {
+        font-size: 22px;
+    }
+}

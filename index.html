@@ -1,29 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title> Nairobi Street Kitchen - Home</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body class="landing">
-        <div class="pagegrid">
-            <header class="siteheader">
-                <hi> NAIROBI STREET KITCHEN</hi>
-                <nav class="main-nav">
-                    <a>Reservations</a>
-                    <a>Lunch</a>
-                    <a>Dinner</a>
-                    <a>Drinks</a>
-                </nav>
-            </header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nairobi Street Kitchen</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-            <main>
-                <div class="intro">
+<body>
 
-                </div>
-                <div></div>
-            </main>
-        </div>
+<header class="sticky">
+    <h1 class="logo">Nairobi Street Kitchen</h1>
+    <nav>
+        <ul>
+            <li><a href="#reservation">Home Page</a></li>
+            <li><a href="lunch.html">Lunch</a></li>
+            <li><a href="dinner.html">Dinner</a></li>
+            <li><a href="desserts.html">Desserts</a></li>
+        </ul>
+    </nav>
+</header>
 
-    </body>
+<section class="hero-grid">
+    <div class="hero-left">
+        <h2>Welcome to Nairobi Street Kitchen</h2>
+        <p>We offer a thrilling street food-market style concept, with a wide variety of different food, beverage, art, culture, and entertainment options.</p>
+        <p>Step into Nairobi Street Kitchen and experience the energy of Kenya’s bustling street food markets. Every dish tells a story, rich in flavor and full of life.</p>
+
+        <!-- Button shows the daily special using JavaScript -->
+        <button id="showSpecial">Show Today’s Special</button>
+        <p id="specialText" class="hidden">🔥 Today’s Special: Swahili Coconut Chicken!</p>
+    </div>
+
+    <!-- Image uses relative positioning for the overlay text -->
+    <div class="hero-right relative-box">
+        <img src="https://th.bing.com/th/id/OIP.RdNIj4ZG6RCuQKKVdnmrqQHaEK?w=316&h=180&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3" alt="Nairobi street kitchen">
+        <p class="overlay">Authentic Flavors</p>
+    </div>
+</section>
+
+<section class="image-grid">
+    <div class="img-box">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.vnP7VejYvo5g6K0KnszopwHaJQ?rs=1&pid=ImgDetMain&o=7&rm=3" alt="">
+    </div>
+
+    <div class="img-box">
+        <img src="https://tse4.mm.bing.net/th/id/OIP.w5SfU-nZWzr7utTnN24UswHaHa?pid=ImgDet&w=178&h=178&c=7&dpr=1.5&o=7&rm=3" alt="">
+    </div>
+
+    <div class="img-box">
+        <img src="https://th.bing.com/th?q=Shawarma%20Street%20Nairobi&pid=ImgDet&w=150&h=150&c=1&p=1&rs=1&t=1&dpr=1.5&mkt=en-us&adlt=strict&o=7&rm=3" alt="">
+    </div>
+
+    <div class="img-box">
+        <img src="https://th.bing.com/th/id/OIP.kMVAefeL1GsUJJWb9M-2XQHaHa?w=194&h=194&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3" alt="">
+    </div>
+</section>
+
+<section id="reservation" class="reservation-form">
+    <h2>Make a Reservation</h2>
+
+    <!-- Simple form for reservation submission -->
+    <form action="#" method="POST">
+        <label>Date:</label>
+        <input type="date" required>
+
+        <label>Time:</label>
+        <input type="time" required>
+
+        <label>Number of Guests:</label>
+        <input type="number" min="1" required>
+
+        <button type="submit">Reserve Now</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2024 Nairobi Street Kitchen. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
 </html>
+
